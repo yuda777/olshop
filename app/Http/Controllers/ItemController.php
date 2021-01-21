@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Items;
+use App\Item;
 use Illuminate\Http\Request;
 
-class ItemsController extends Controller
+class ItemController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,15 @@ class ItemsController extends Controller
      */
     public function index()
     {
-        $items = Items::all();
-        return view('item',compact('items'));
+        $items = Item::latest()->paginate(5);
+        return view('item',compact('items'))->with('i',(request()->input('page',1)-1)*5);
+
+    }
+
+    public function sh()
+    {
+        $item = Item::all();
+        return view('itemdetail',compact('item'));
     }
 
     /**
@@ -42,12 +49,13 @@ class ItemsController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Items  $items
+     * @param  \App\Item  $items
      * @return \Illuminate\Http\Response
      */
-    public function show(Items $items)
+    public function show(Item $item)
     {
-        //
+        // $items = Items::all();
+        return view('show',compact('item'));
     }
 
     /**

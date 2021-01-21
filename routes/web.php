@@ -13,7 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'ItemsController@index');
+// Route::get('/', 'ItemsController@index');
+// Route::get('/sh', 'ItemsController@sh');
+// Route::get('p/{id}', 'ItemsController@show');
 
+// Route::get('/db', 'Users@index');
 
-Route::get('/db', 'Users@index');
+// Route::resource('products','ProductController');
+Route::resource('items','ItemController');
