@@ -27,52 +27,23 @@
                     </div>
                     <div class="pager  left-main-image ">
                         <div class="inner">
-                            <div class="wrap thumb first  active">
-                                <noscript data-rimg-noscript="">
-                                    <img src="{{ asset('storage/g1.webp') }}"
-                                        alt="{{ $item->item_name }}" srcset="{{ asset('storage/g1.webp') }} 1x, {{ asset('storage/g1.webp') }} 2x, {{ asset('storage/g1.webp') }} 3x, {{ asset('storage/g1.webp') }} 4x"
-                                        data-high-res-url="{{ asset('storage/g1.webp') }}"
-                                        data-image-id="24809866068143"
-                                        >
-                                </noscript>
-                                <img data-savepage-current src="{{ asset('storage/g1.webp') }}" data-savepage-src="{{ asset('storage/g1.webp') }}" src="{{ asset('storage/g1.webp') }}" alt="CORWIN GREEN TEE" data-rimg="loaded" data-rimg-scale="1" data-rimg-template="{{ asset('storage/g1.webp') }}" data-rimg-max="762x1100" data-rimg-crop="" data-savepage-srcset="{{ asset('storage/g1.webp') }} 1.00x" srcset="" data-high-res-url="{{ asset('storage/g1.webp') }}" data-image-id="24809866068143" data-rimg-template-svg="data:image/svg+xml;utf8,<svg%20xmlns='http://www.w3.org/2000/svg'%20width='70'%20height='100'></svg>">
+                            <div class="wrap thumb first active">
+                                <img src="{{ asset('storage/g1.webp') }}" alt="{{ $item->item_name }}">
                                 <span class="overlay"></span>
                             </div>
                             <div class="wrap thumb">
-                                <noscript data-rimg-noscript="">
-                                    <img
-                                        src="//cdn.shopify.com/s/files/1/1608/3005/products/PalmerEDIT_b_70x100.jpg?v=1610524516"
-                                        alt="{{ $item->item_name }}" srcset="//cdn.shopify.com/s/files/1/1608/3005/products/PalmerEDIT_b_70x100.jpg?v=1610524516 1x, //cdn.shopify.com/s/files/1/1608/3005/products/PalmerEDIT_b_140x200.jpg?v=1610524516 2x, //cdn.shopify.com/s/files/1/1608/3005/products/PalmerEDIT_b_210x300.jpg?v=1610524516 3x, //cdn.shopify.com/s/files/1/1608/3005/products/PalmerEDIT_b_280x400.jpg?v=1610524516 4x"
-                                        data-high-res-url="//cdn.shopify.com/s/files/1/1608/3005/products/PalmerEDIT_b_2000x.jpg?v=1610524516"
-                                        data-image-id="24809866133679"
-                                        >
-                                </noscript>
-                                <img data-savepage-current src="https://cdn.shopify.com/s/files/1/1608/3005/products/PalmerEDIT_b_96x128.jpg?v=1610524516" data-savepage-src="//cdn.shopify.com/s/files/1/1608/3005/products/PalmerEDIT_b_70x100.jpg?v=1610524516" src="" alt="CORWIN GREEN TEE" data-rimg="loaded" data-rimg-scale="1" data-rimg-template="//cdn.shopify.com/s/files/1/1608/3005/products/PalmerEDIT_b_{size}.jpg?v=1610524516" data-rimg-max="762x1100" data-rimg-crop="" data-savepage-srcset="//cdn.shopify.com/s/files/1/1608/3005/products/PalmerEDIT_b_96x128.jpg?v=1610524516 1.00x" srcset="" data-high-res-url="//cdn.shopify.com/s/files/1/1608/3005/products/PalmerEDIT_b_2000x.jpg?v=1610524516" data-image-id="24809866133679" data-rimg-template-svg="data:image/svg+xml;utf8,<svg%20xmlns='http://www.w3.org/2000/svg'%20width='70'%20height='100'></svg>">
+                                <img src="{{ asset('storage/t2.jpg') }}" alt="{{ $item->item_name }}">
                                 <span class="overlay"></span>
                             </div>
-                            <div class="wrap thumb  last ">
-                                <noscript data-rimg-noscript="">
-                                    <img
-                                        src="//cdn.shopify.com/s/files/1/1608/3005/products/PalmerEDIT_c_70x100.jpg?v=1610524516"
-                                        alt="{{ $item->item_name }}"
-
-                                        srcset="//cdn.shopify.com/s/files/1/1608/3005/products/PalmerEDIT_c_70x100.jpg?v=1610524516 1x, //cdn.shopify.com/s/files/1/1608/3005/products/PalmerEDIT_c_140x200.jpg?v=1610524516 2x, //cdn.shopify.com/s/files/1/1608/3005/products/PalmerEDIT_c_210x300.jpg?v=1610524516 3x, //cdn.shopify.com/s/files/1/1608/3005/products/PalmerEDIT_c_280x400.jpg?v=1610524516 4x"
-                                        data-high-res-url="//cdn.shopify.com/s/files/1/1608/3005/products/PalmerEDIT_c_2000x.jpg?v=1610524516"
-                                        data-image-id="24809866100911"
-                                        >
-                                </noscript>
-                                <img data-savepage-current src="https://cdn.shopify.com/s/files/1/1608/3005/products/PalmerEDIT_c_96x128.jpg?v=1610524516" data-savepage-src="//cdn.shopify.com/s/files/1/1608/3005/products/PalmerEDIT_c_70x100.jpg?v=1610524516" src="" alt="CORWIN GREEN TEE" data-rimg="loaded" data-rimg-scale="1" data-rimg-template="//cdn.shopify.com/s/files/1/1608/3005/products/PalmerEDIT_c_{size}.jpg?v=1610524516" data-rimg-max="762x1100" data-rimg-crop="" data-savepage-srcset="//cdn.shopify.com/s/files/1/1608/3005/products/PalmerEDIT_c_96x128.jpg?v=1610524516 1.00x" srcset="" data-high-res-url="//cdn.shopify.com/s/files/1/1608/3005/products/PalmerEDIT_c_2000x.jpg?v=1610524516" data-image-id="24809866100911" data-rimg-template-svg="data:image/svg+xml;utf8,<svg%20xmlns='http://www.w3.org/2000/svg'%20width='70'%20height='100'></svg>">
+                            <div class="wrap thumb last">
+                                <img src="{{ asset('storage/t1.jpg') }}" alt="{{ $item->item_name }}" >
                                 <span class="overlay"></span>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="product-details-wrapper">
-                    <div class="
-                        product-details
-                        product-details-alignment-left
-                        border
-                        ">
+                    <div class=" product-details product-details-alignment-left border ">
                         <div class="header">
                             <h1 class="title">
                                 {{ $item->item_name }}
@@ -82,10 +53,7 @@
                             </p>
                         </div>
                         <div class="options  ">
-                            <form method="post" action="/cart/add" id="6223008432303" accept-charset="UTF-8" class="
-                                product-form
-                                product-form-has-spb
-                                " enctype="multipart/form-data" data-product-form="">
+                            <form method="post" action="/cart/add" id="6223008432303" accept-charset="UTF-8" class=" product-form product-form-has-spb " enctype="multipart/form-data" data-product-form="">
                                 <input type="hidden" name="form_type" value="product"><input type="hidden" name="utf8" value="✓">
                                 <div class="product-form-grid product-form-grid-radio">
                                     <div class=" option-header js-required ">
@@ -229,6 +197,23 @@
                     </div>
                 </div>
             </section>
+            <div class="slider-wrap">
+                <div class="slider" id="slider">
+                    <div class="holder">
+                        <div class="slide-wrapper">
+                            <div class="slide"><img class="slide-image" src="{{ asset('storage/v1.jpg') }}" /></div>
+                        </div>
+                        <div class="slide-wrapper">
+                            <div class="slide"><img class="slide-image" src="{{ asset('storage/v2.jpg') }}" /></div>
+                        </div>
+                        <div class="slide-wrapper">
+                            <div class="slide"><img class="slide-image" src="{{ asset('storage/v3.jpg') }}" /></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
             <section class="related-products">
                 <h2 class="section-title section-border">Related products</h2>
                 <ul class="product-list">
