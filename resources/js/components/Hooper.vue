@@ -2,22 +2,13 @@
 
   <hooper ref="carousel" @slide="updateCarousel">
     <slide>
-      slide 1
+        <img :src="'../storage/g1.webp'">
     </slide>
     <slide>
-      slide 2
+      <img :src="'../storage/g2.webp'">
     </slide>
     <slide>
-      slide 3
-    </slide>
-    <slide>
-      slide 4
-    </slide>
-    <slide>
-      slide 5
-    </slide>
-    <slide>
-      slide 6
+      <img :src="'../storage/g3.webp'">
     </slide>
   </hooper>
 </template>

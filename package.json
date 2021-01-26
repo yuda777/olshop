@@ -30,6 +30,7 @@
         "vue-template-compiler": "^2.6.10"
     },
     "dependencies": {
+        "hooper": "^0.3.4",
         "laravel-elixir": "^6.0.0-18",
         "node-sass": "^4.14.1"
     }
