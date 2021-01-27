@@ -21,3 +21,4 @@ use Illuminate\Support\Facades\Route;
 
 // Route::resource('products','ProductController');
 Route::resource('items','ItemController');
+Route::view('fal','fal');
