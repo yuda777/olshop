@@ -112,6 +112,23 @@
             // var flkty = new Flickity( 'select', index );
         });
 
+        // var flkty = flkty.data('flickity');
+        var navTop  = $carouselNav.position().top;
+        var navCellHeight = $carouselNavCells.height();
+        var navHeight = $carouselNav.height();
+
+        flkty.on( 'select', function(index) {
+            console.log(index)
+            // set selected nav cell
+            $carouselNav.find('.is-nav-selected').removeClass('is-nav-selected');
+            var $selected = $carouselNavCells.eq( index ).addClass('is-nav-selected');
+            // // scroll nav
+            var scrollY = $selected.position().top +
+            $carouselNav.scrollTop() - ( navHeight + navCellHeight ) / 2;
+            $carouselNav.animate({
+                scrollTop: scrollY
+            });
+        });
 
     </script>
 
