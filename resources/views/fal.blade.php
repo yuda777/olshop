@@ -7,7 +7,7 @@
 
     <link rel="dns-prefetch" href="//font.gstatic.com">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <title>olshop</title>
+    <title>Flickity</title>
 </head>
 <body>
     <style>
@@ -18,55 +18,55 @@
         body { font-family: sans-serif; }
 
         .carousel-container {
-        display: flex;
+            display: flex;
         }
 
         .carousel {
-        background: #FAFAFA;
-        margin-bottom: 40px;
-        flex-grow: 1;
+            background: #FAFAFA;
+            margin-bottom: 40px;
+            flex-grow: 1;
         }
 
         .carousel-cell {
-        width: 66%;
-        height: 300px;
-        margin-right: 10px;
-        background: #8C8;
-        border-radius: 5px;
-        counter-increment: carousel-cell;
+            width: 66%;
+            height: 300px;
+            margin-right: 10px;
+            background: #8C8;
+            border-radius: 5px;
+            counter-increment: carousel-cell;
         }
 
         /* cell number */
         .carousel-cell:before {
-        display: block;
-        text-align: center;
-        content: counter(carousel-cell);
-        line-height: 300px;
-        font-size: 80px;
-        color: white;
+            display: block;
+            text-align: center;
+            content: counter(carousel-cell);
+            line-height: 300px;
+            font-size: 80px;
+            color: white;
         }
 
         .carousel-nav {
-        width: 120px;
-        margin-left: 10px;
-        max-height: 300px;
-        overflow-y: scroll;
+            width: 120px;
+            margin-left: 10px;
+            max-height: 300px;
+            overflow-y: scroll;
         }
 
         .carousel-nav .carousel-cell {
-        height: 80px;
-        width: 100px;
-        margin: 0 0 5px 0;
-        cursor: pointer;
+            height: 80px;
+            width: 100px;
+            margin: 0 0 5px 0;
+            cursor: pointer;
         }
 
         .carousel-nav .carousel-cell:before {
-        font-size: 50px;
-        line-height: 80px;
+            font-size: 50px;
+            line-height: 80px;
         }
 
         .carousel-nav .carousel-cell.is-nav-selected {
-        background: #ED2;
+            background: #ED2;
         }
 
     </style>
@@ -105,7 +105,8 @@
 
         $carouselNav.on( 'click', '.carousel-cell', function( event ) {
             var index = $( event.currentTarget ).index();
-            console.log(index);
+            // console.log(index);
+            flkty.select( index );
             //$carouselNav.flickity( 'select', index );
             // flkty.select( index );
             // var flkty = new Flickity( 'select', index );
