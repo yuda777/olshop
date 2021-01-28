@@ -14255,6 +14255,37 @@ img[data-rimg="loaded"] {
 .cart-wrapper-response>p:last-child {
 	margin-bottom: 0
 }
+
+.carousel-main {
+    border: 1px solid gray;
+    width: 250px;
+    margin-left: 40px;
+    height: 350px;
+}
+
+.is-nav-selected{
+    border: 1px solid grey;
+}
+
+.carousel-cell {
+    width: 100%; /* full width */
+    height: 100%; /* height of carousel */
+}
+
+.img-thumb{
+    width: 50px;
+    height: 90px;
+}
+
+.img-main{
+    width: 200px;
+    height: 300px;
+}
+
+.fit-image{
+    -o-object-fit: cover;
+       object-fit: cover;
+}
 /*!
  * Bootstrap v4.5.3 (https://getbootstrap.com/)
  * Copyright 2011-2020 The Bootstrap Authors

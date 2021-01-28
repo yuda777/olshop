@@ -10,106 +10,47 @@
     <title>Flickity</title>
 </head>
 <body>
-    <style>
-        /* external css: flickity.css */
-
-        * { box-sizing: border-box; }
-
-        body { font-family: sans-serif; }
-
-        .carousel-container {
-            display: flex;
-        }
-
-        .carousel {
-            background: #FAFAFA;
-            margin-bottom: 40px;
-            flex-grow: 1;
-        }
-
-        .carousel-cell {
-            width: 66%;
-            height: 300px;
-            margin-right: 10px;
-            background: #8C8;
-            border-radius: 5px;
-            counter-increment: carousel-cell;
-        }
-
-        /* cell number */
-        .carousel-cell:before {
-            display: block;
-            text-align: center;
-            content: counter(carousel-cell);
-            line-height: 300px;
-            font-size: 80px;
-            color: white;
-        }
-
-        .carousel-nav {
-            width: 120px;
-            margin-left: 10px;
-            max-height: 300px;
-            overflow-y: scroll;
-        }
-
-        .carousel-nav .carousel-cell {
-            height: 80px;
-            width: 100px;
-            margin: 0 0 5px 0;
-            cursor: pointer;
-        }
-
-        .carousel-nav .carousel-cell:before {
-            font-size: 50px;
-            line-height: 80px;
-        }
-
-        .carousel-nav .carousel-cell.is-nav-selected {
-            background: #ED2;
-        }
-
-    </style>
     <h1>Flickity - side vertical navigation</h1>
 
     <div class="carousel-container">
-    <!-- Flickity HTML init -->
-        <div class="carousel-nav">
-            <div class="carousel-cell is-nav-selected"></div>
-            <div class="carousel-cell"></div>
-            <div class="carousel-cell"></div>
-            <div class="carousel-cell"></div>
-            <div class="carousel-cell"></div>
-            <div class="carousel-cell"></div>
-            <div class="carousel-cell"></div>
+        <div class="row">
+            <div class="col-md-1">
+                <div class="carousel-nav">
+                    <div class="carousel-cell is-nav-selected">
+                        <img class="img-caro img-thumb img-responsive fit-image" src="../storage/g1.webp">
+                    </div>
+                    <div class="carousel-cell">
+                        <img class="img-caro img-thumb img-responsive fit-image"  src="../storage/g2.webp">
+                    </div>
+                    <div class="carousel-cell">
+                        <img class="img-caro img-thumb img-responsive fit-image" src="../storage/g3.webp">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="carousel carousel-main">
+                    <div class="carousel-cell">
+                        <img class="img-caro img-main img-responsive fit-image" src="../storage/g1.webp">
+                    </div>
+                    <div class="carousel-cell">
+                        <img class="img-caro img-main img-responsive fit-image" src="../storage/g2.webp">
+                    </div>
+                    <div class="carousel-cell">
+                        <img class="img-caro img-main" src="../storage/g3.webp">
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="carousel carousel-main">
-            <div class="carousel-cell"></div>
-            <div class="carousel-cell"></div>
-            <div class="carousel-cell"></div>
-            <div class="carousel-cell"></div>
-            <div class="carousel-cell"></div>
-            <div class="carousel-cell"></div>
-            <div class="carousel-cell"></div>
-        </div>
-
     </div>
 
     <script src="{{ asset('js/app.js') }}" ></script>
-    {{-- <script src="https://npmcdn.com/flickity@2/dist/flickity.pkgd.js"></script> --}}
     <script>
-
         var $carouselNav = $('.carousel-nav');
         var $carouselNavCells = $carouselNav.find('.carousel-cell');
 
-
         $carouselNav.on( 'click', '.carousel-cell', function( event ) {
             var index = $( event.currentTarget ).index();
-            // console.log(index);
             flkty.select( index );
-            //$carouselNav.flickity( 'select', index );
-            // flkty.select( index );
-            // var flkty = new Flickity( 'select', index );
         });
 
         // var flkty = flkty.data('flickity');
@@ -119,10 +60,8 @@
 
         flkty.on( 'select', function(index) {
             console.log(index)
-            // set selected nav cell
             $carouselNav.find('.is-nav-selected').removeClass('is-nav-selected');
             var $selected = $carouselNavCells.eq( index ).addClass('is-nav-selected');
-            // // scroll nav
             var scrollY = $selected.position().top +
             $carouselNav.scrollTop() - ( navHeight + navCellHeight ) / 2;
             $carouselNav.animate({

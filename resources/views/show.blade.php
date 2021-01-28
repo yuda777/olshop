@@ -18,24 +18,32 @@
                     <div class="container">
                         <div class="product-main-image wrap ">
                             {{-- <img src="{{ asset('storage/g1.webp') }}"> --}}
-                            <div id="app">
+                            {{-- <div id="app">
                             <hooper-component></hooper-component>
+                            </div> --}}
+                            <div class="carousel carousel-main">
+                                <div class="carousel-cell">
+                                    <img class="" src="../storage/g1.webp">
+                                </div>
+                                <div class="carousel-cell">
+                                    <img class="" src="../storage/g2.webp">
+                                </div>
+                                <div class="carousel-cell">
+                                    <img class="" src="../storage/g3.webp">
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="pager  left-main-image ">
-                        <div class="inner">
-                            <div class="wrap thumb first active">
+                        <div class="inner carousel-nav">
+                            <div class="carousel-cell wrap thumb is-nav-selected first ">
                                 <img src="{{ asset('storage/g1.webp') }}" alt="{{ $item->item_name }}">
-                                <span class="overlay"></span>
                             </div>
-                            <div class="wrap thumb">
-                                <img src="{{ asset('storage/t2.jpg') }}" alt="{{ $item->item_name }}">
-                                <span class="overlay"></span>
+                            <div class="carousel-cell wrap thumb">
+                                <img src="{{ asset('storage/g2.webp') }}" alt="{{ $item->item_name }}">
                             </div>
-                            <div class="wrap thumb last">
-                                <img src="{{ asset('storage/t1.jpg') }}" alt="{{ $item->item_name }}" >
-                                <span class="overlay"></span>
+                            <div class="carousel-cell wrap thumb last">
+                                <img src="{{ asset('storage/g3.webp') }}" alt="{{ $item->item_name }}" >
                             </div>
                         </div>
                     </div>
@@ -475,6 +483,33 @@
             </section>
         </div>
     </div>
-    <script></script>
+    {{-- <script>
+        var $carouselNav = $('.carousel-nav');
+        var $carouselNavCells = $carouselNav.find('.carousel-cell');
+
+        $carouselNav.on( 'click', '.carousel-cell', function( event ) {
+            var index = $( event.currentTarget ).index();
+            console.log(index);
+            flkty.select( index );
+        });
+
+        // var flkty = flkty.data('flickity');
+        var navTop  = $carouselNav.position().top;
+        var navCellHeight = $carouselNavCells.height();
+        var navHeight = $carouselNav.height();
+
+        flkty.on( 'select', function(index) {
+            console.log(index)
+            $carouselNav.find('.is-nav-selected').removeClass('is-nav-selected');
+            var $selected = $carouselNavCells.eq( index ).addClass('is-nav-selected');
+            var scrollY = $selected.position().top +
+            $carouselNav.scrollTop() - ( navHeight + navCellHeight ) / 2;
+            $carouselNav.animate({
+                scrollTop: scrollY
+            });
+        });
+
+    </script> --}}
+
 </div>
 @endsection
