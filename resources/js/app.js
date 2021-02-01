@@ -7,8 +7,6 @@
 require('./bootstrap');
 
 window.Vue = require('vue');
-window.Flickity = require('flickity');
-window.flkty = new Flickity('.carousel');
 
 /**
  * The following block of code may be used to automatically register your
@@ -50,29 +48,45 @@ window.doingnothing = function (event) {
     $("#main-header--mobile-nav").addClass("active");
 }
 
-var $carouselNav = $('.carousel-nav');
-var $carouselNavCells = $carouselNav.find('.carousel-cell');
-
-$carouselNav.on( 'click', '.carousel-cell', function( event ) {
-    var index = $( event.currentTarget ).index();
-    console.log(index);
-    flkty.select( index );
-});
-
+window.Flickity = require('flickity');
+// flkty.resize()
 // var flkty = flkty.data('flickity');
-var navTop  = $carouselNav.position().top;
-var navCellHeight = $carouselNavCells.height();
-var navHeight = $carouselNav.height();
-
-flkty.on( 'select', function(index) {
-    console.log(index)
-    $carouselNav.find('.is-nav-selected').removeClass('is-nav-selected');
-    var $selected = $carouselNavCells.eq( index ).addClass('is-nav-selected');
-    var scrollY = $selected.position().top +
-    $carouselNav.scrollTop() - ( navHeight + navCellHeight ) / 2;
-    $carouselNav.animate({
-        scrollTop: scrollY
+if($('.carousel-jumbotron').length){
+    window.flkjumbotron = new Flickity('.carousel-jumbotron', {
+        autoPlay: false,
+        setGallerySize: false,
+        resize: true
     });
-});
 
-console.log("aqua");
+    window.onresize = function(event) {
+        flkjumbotron.resize();
+    };
+}
+
+if($('.carousel-priviewitem').length){
+    window.flkpriviewitem = new Flickity('.carousel-priviewitem');
+    var $carouselNav = $('.carousel-nav');
+    var $carouselNavCells = $carouselNav.find('.carousel-cell');
+
+    $carouselNav.on( 'click', '.carousel-cell', function( event ) {
+        var index = $( event.currentTarget ).index();
+        flkpriviewitem.select( index );
+    });
+
+    var navTop  = $carouselNav.position().top;
+    var navCellHeight = $carouselNavCells.height();
+    var navHeight = $carouselNav.height();
+
+    flkpriviewitem.on( 'select', function(index) {
+        console.log(index)
+        $carouselNav.find('.is-nav-selected').removeClass('is-nav-selected');
+        var $selected = $carouselNavCells.eq( index ).addClass('is-nav-selected');
+        var scrollY = $selected.position().top +
+        $carouselNav.scrollTop() - ( navHeight + navCellHeight ) / 2;
+        $carouselNav.animate({
+            scrollTop: scrollY
+        });
+    });
+}
+
+

@@ -21,7 +21,7 @@
                             {{-- <div id="app">
                             <hooper-component></hooper-component>
                             </div> --}}
-                            <div class="carousel carousel-main">
+                            <div class="carousel carousel-main carousel-priviewitem" >
                                 <div class="carousel-cell">
                                     <img class="" src="../storage/g1.webp">
                                 </div>
