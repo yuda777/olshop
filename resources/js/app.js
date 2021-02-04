@@ -55,7 +55,20 @@ if($('.carousel-jumbotron').length){
     window.flkjumbotron = new Flickity('.carousel-jumbotron', {
         autoPlay: false,
         setGallerySize: false,
-        resize: true
+        resize: true,
+        imagesLoaded: true
+    });
+
+    flkjumbotron.on( 'select', function(index) {
+        const list = document.querySelectorAll('.text-on-jumbotron');
+        for (var i = 0; i < list.length; ++i) {
+            if ( index == i ){
+                list[i].classList.add('animate');
+            }else{
+                list[i].classList.remove('animate');
+            }
+        }
+        console.log(index);
     });
 
     window.onresize = function(event) {
@@ -88,5 +101,12 @@ if($('.carousel-priviewitem').length){
         });
     });
 }
+
+window.onload = function() {
+    const list = document.querySelectorAll('.text-on-jumbotron');
+    for (var i = 0; i < list.length; ++i) {
+        list[i].classList.add('animate');
+     }
+};
 
 

@@ -70,12 +70,12 @@
         display: none;
     }
 
-    .title-jumbotron {
+    /* .title-jumbotron {
         opacity: 0;
         transform: translate3d(0, 20px, 0);
         transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.45s,transform 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.45s;
         will-change: opacity, transform;
-    }
+    } */
     .text-on-jumbotron {
         position: absolute;
         top: 0;
@@ -84,7 +84,14 @@
         width: 100%;
     }
 
-    .title-jumbotron {
+    .button-jumbotron {
+        cursor: grab;
+    }
+    .text-on-jumbotron {
+        opacity: 0;
+        transform: translate(0, 20px);
+        transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.45s,transform 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.45s;
+        will-change: opacity, transform;
         font-family: "Twentieth Century",sans-serif;
         font-style: normal;
         font-weight: 700;
@@ -92,8 +99,44 @@
         color: #fff;
         cursor: default;
     }
-    .button-jumbotron {
-        cursor: grab;
+    .animate{
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+    .button-jumbotron{
+        font-family: "Twentieth Century",sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        position: relative;
+        display: inline-block;
+        padding: 10px 18px;
+        font-size: 13px;
+        line-height: 1.5;
+        letter-spacing: 0.08em;
+        color: #fff;
+        text-align: center;
+        text-transform: uppercase;
+        cursor: pointer;
+        background-color: #1b1e3f;
+        border: 1px solid #1b1e3f;
+        border-radius: 0;
+        transition: 0.15s cubic-bezier(0.4, 0, 0.2, 1) background-color,0.15s cubic-bezier(0.4, 0, 0.2, 1) border-color;
+    }
+    /* position dots in carousel */
+    .flickity-page-dots {
+        bottom: 5px;
+    }
+    /* white circles */
+    .flickity-page-dots .dot {
+        width: 12px;
+        height: 12px;
+        opacity: 1;
+        background: transparent;
+        border: 2px solid white;
+    }
+    /* fill-in selected dot */
+    .flickity-page-dots .dot.is-selected {
+        background: white;
     }
 </style>
 <div class="jumbotron jumbotron-fluid" style="padding: 0;">
@@ -108,14 +151,24 @@
             <img class="" src="{{ asset('storage/c1.webp') }}">
         </div>
         <div class="carousel-cell">
+            <div class="text-on-jumbotron">
+                <h2 class="title-jumbotron">SALE UP TO 60%</h2>
+                <span class="button-jumbotron" href="/collections/sale">
+                    shop now
+                </span>
+            </div>
             <img class="" src="{{ asset('storage/c2.webp') }}">
         </div>
         <div class="carousel-cell">
+            <div class="text-on-jumbotron">
+                <h2 class="title-jumbotron">SALE UP TO 60%</h2>
+                <span class="button-jumbotron" href="/collections/sale">
+                    shop now
+                </span>
+            </div>
             <img class="" src="{{ asset('storage/c3.webp') }}">
         </div>
     </div>
-    <h1 class="display-4 title-jumbotron" style="background-color: red;">Fluid jumbotron</h1>
-    <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
 </div>
 <div class="container">
     <div class="row">
