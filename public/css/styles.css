@@ -43,20 +43,16 @@
 }
 
 .pswp--zoom-allowed .pswp__img {
-	cursor: -webkit-zoom-in;
-	cursor: -moz-zoom-in;
 	cursor: zoom-in
 }
 
 .pswp--zoomed-in .pswp__img {
 	cursor: -webkit-grab;
-	cursor: -moz-grab;
 	cursor: grab
 }
 
 .pswp--dragging .pswp__img {
 	cursor: -webkit-grabbing;
-	cursor: -moz-grabbing;
 	cursor: grabbing
 }
 
@@ -173,6 +169,15 @@
 	text-decoration: underline
 }
 
+@-webkit-keyframes placeholder-pulse {
+	from {
+		background-color: #eee
+	}
+	to {
+		background-color: #e1e1e1
+	}
+}
+
 @keyframes placeholder-pulse {
 	from {
 		background-color: #eee
@@ -191,12 +196,18 @@ img[data-rimg="lazy"],
 img[data-rimg="loading"],
 img[data-rimg="loaded"] {
 	background-size: cover;
-	animation-duration: 1s;
-	animation-iteration-count: infinite;
-	animation-name: placeholder-pulse;
-	animation-timing-function: ease-in-out;
-	animation-fill-mode: forwards;
-	animation-direction: alternate
+	-webkit-animation-duration: 1s;
+	        animation-duration: 1s;
+	-webkit-animation-iteration-count: infinite;
+	        animation-iteration-count: infinite;
+	-webkit-animation-name: placeholder-pulse;
+	        animation-name: placeholder-pulse;
+	-webkit-animation-timing-function: ease-in-out;
+	        animation-timing-function: ease-in-out;
+	-webkit-animation-fill-mode: forwards;
+	        animation-fill-mode: forwards;
+	-webkit-animation-direction: alternate;
+	        animation-direction: alternate
 }
 
 .action-button.submit,
@@ -589,7 +600,6 @@ html .shopify-payment-button .shopify-payment-button__button--unbranded:hover {
 		color: black !important;
 		box-shadow: none !important;
 		text-shadow: none !important;
-		-webkit-filter: none !important;
 		filter: none !important;
 		-ms-filter: none !important
 	}
@@ -668,8 +678,8 @@ audio:not([controls]) {
 html {
 	font-size: 100%;
 	-webkit-text-size-adjust: 100%;
-	-ms-text-size-adjust: 100%;
-	text-size-adjust: 100%
+	-moz-text-size-adjust: 100%;
+	     text-size-adjust: 100%
 }
 
 html,
@@ -1263,11 +1273,13 @@ a.pswp__share--download:hover {
 }
 
 .pswp--css_animation .pswp__preloader--active .pswp__preloader__icn {
-	animation: clockwise 500ms linear infinite
+	-webkit-animation: clockwise 500ms linear infinite;
+	        animation: clockwise 500ms linear infinite
 }
 
 .pswp--css_animation .pswp__preloader--active .pswp__preloader__donut {
-	animation: donut-rotate 1000ms cubic-bezier(0.4, 0, 0.22, 1) infinite
+	-webkit-animation: donut-rotate 1000ms cubic-bezier(0.4, 0, 0.22, 1) infinite;
+	        animation: donut-rotate 1000ms cubic-bezier(0.4, 0, 0.22, 1) infinite
 }
 
 .pswp--css_animation .pswp__preloader__icn {
@@ -1313,12 +1325,33 @@ a.pswp__share--download:hover {
 	}
 }
 
+@-webkit-keyframes clockwise {
+	0% {
+		transform: rotate(0deg)
+	}
+	100% {
+		transform: rotate(360deg)
+	}
+}
+
 @keyframes clockwise {
 	0% {
 		transform: rotate(0deg)
 	}
 	100% {
 		transform: rotate(360deg)
+	}
+}
+
+@-webkit-keyframes donut-rotate {
+	0% {
+		transform: rotate(0)
+	}
+	50% {
+		transform: rotate(-140deg)
+	}
+	100% {
+		transform: rotate(0)
 	}
 }
 
@@ -1609,8 +1642,6 @@ main section:first-child .section-border {
 }
 
 .field {
-	-webkit-transition: box-shadow 250ms, border 250ms, color 250ms;
-	-moz-transition: box-shadow 250ms, border 250ms, color 250ms;
 	transition: box-shadow 250ms, border 250ms, color 250ms
 }
 
@@ -2284,6 +2315,15 @@ mark {
 	background: #ff0
 }
 
+@-webkit-keyframes spinner {
+	from {
+		transform: rotate(0deg)
+	}
+	to {
+		transform: rotate(359deg)
+	}
+}
+
 @keyframes spinner {
 	from {
 		transform: rotate(0deg)
@@ -2953,8 +2993,6 @@ mark {
 	opacity: 0;
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
 	filter: alpha(opacity=0);
-	-webkit-transition: opacity 0.2s ease-out;
-	-moz-transition: opacity 0.2s ease-out;
 	transition: opacity 0.2s ease-out;
 	position: fixed;
 	top: 0;
@@ -2992,8 +3030,6 @@ mark {
 	opacity: 0;
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
 	filter: alpha(opacity=0);
-	-webkit-transition: opacity 0.4s ease-out;
-	-moz-transition: opacity 0.4s ease-out;
 	transition: opacity 0.4s ease-out
 }
 
@@ -3018,10 +3054,6 @@ mark {
 }
 
 .home-video-content {
-	-webkit-transform: translate(-50%, -50%);
-	-moz-transform: translate(-50%, -50%);
-	-ms-transform: translate(-50%, -50%);
-	-o-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
 	position: absolute;
 	top: 50%;
@@ -3035,10 +3067,6 @@ mark {
 
 @media (min-width: 720px) {
 	.sidebar-enabled .home-video-content {
-		-webkit-transform: translate(0, 0);
-		-moz-transform: translate(0, 0);
-		-ms-transform: translate(0, 0);
-		-o-transform: translate(0, 0);
 		transform: translate(0, 0);
 		position: relative;
 		top: auto;
@@ -3110,10 +3138,6 @@ mark {
 }
 
 .home-video-play-button.mobile {
-	-webkit-transform: translate(-50%, -50%);
-	-moz-transform: translate(-50%, -50%);
-	-ms-transform: translate(-50%, -50%);
-	-o-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
 	position: absolute;
 	top: 50%;
@@ -3419,10 +3443,6 @@ mark {
 }
 
 .mega-nav .back {
-	-webkit-transform: scale(1.05);
-	-moz-transform: scale(1.05);
-	-ms-transform: scale(1.05);
-	-o-transform: scale(1.05);
 	transform: scale(1.05);
 	opacity: 0.7;
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
@@ -6637,6 +6657,22 @@ table.mobile-layout tr:nth-child(even) td {
 }
 
 .template-gift-card {
+	@-webkit-keyframes slideup {
+		0% {
+			opacity: 0;
+			transform: translateY(2000px) rotate(10deg)
+		}
+		60% {
+			opacity: 1;
+			transform: translateY(-30px)
+		}
+		80% {
+			transform: translateY(10px)
+		}
+		100% {
+			transform: translateY(0) rotate(0deg)
+		}
+	}
 	@keyframes slideup {
 		0% {
 			opacity: 0;
@@ -6651,6 +6687,23 @@ table.mobile-layout tr:nth-child(even) td {
 		}
 		100% {
 			transform: translateY(0) rotate(0deg)
+		}
+	}
+	;
+	@-webkit-keyframes popup {
+		0% {
+			opacity: 0;
+			transform: translateY(30px)
+		}
+		60% {
+			opacity: 1;
+			transform: translateY(-10px)
+		}
+		80% {
+			transform: translateY(2px)
+		}
+		100% {
+			transform: translateY(0)
 		}
 	}
 	;
@@ -6671,6 +6724,16 @@ table.mobile-layout tr:nth-child(even) td {
 		}
 	}
 	;
+	@-webkit-keyframes container-slide {
+		0% {
+			opacity: 0;
+			transform: rotate(0deg)
+		}
+		100% {
+			transform: rotate(0deg)
+		}
+	}
+	;
 	@keyframes container-slide {
 		0% {
 			opacity: 0;
@@ -6678,6 +6741,15 @@ table.mobile-layout tr:nth-child(even) td {
 		}
 		100% {
 			transform: rotate(0deg)
+		}
+	}
+	;
+	@-webkit-keyframes fadein {
+		0% {
+			opacity: 0
+		}
+		100% {
+			opacity: 100
 		}
 	}
 	;
@@ -6724,7 +6796,8 @@ table.mobile-layout tr:nth-child(even) td {
 .template-gift-card header {
 	padding: 3em 0;
 	text-align: center;
-	animation: fadein 0.5s ease-in-out both 0.4s
+	-webkit-animation: fadein 0.5s ease-in-out both 0.4s;
+	        animation: fadein 0.5s ease-in-out both 0.4s
 }
 
 .template-gift-card .shop-title {
@@ -6749,7 +6822,8 @@ table.mobile-layout tr:nth-child(even) td {
 
 .template-gift-card main {
 	padding-bottom: 3em;
-	animation: slideup 0.8s ease-in-out
+	-webkit-animation: slideup 0.8s ease-in-out;
+	        animation: slideup 0.8s ease-in-out
 }
 
 .template-gift-card .gift-card-outer-container {
@@ -6757,14 +6831,16 @@ table.mobile-layout tr:nth-child(even) td {
 	background-color: #34aadc;
 	border-radius: 4px;
 	box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1) inset;
-	animation: container-slide 0.8s ease-in-out
+	-webkit-animation: container-slide 0.8s ease-in-out;
+	        animation: container-slide 0.8s ease-in-out
 }
 
 .template-gift-card .gift-card-inner-container {
 	background-color: #fff;
 	border-radius: 2px;
 	box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
-	animation: cardslide 0.8s ease-in-out
+	-webkit-animation: cardslide 0.8s ease-in-out;
+	        animation: cardslide 0.8s ease-in-out
 }
 
 .template-gift-card .gift-card-inner-container::after {
@@ -6949,7 +7025,8 @@ table.mobile-layout tr:nth-child(even) td {
 	color: #fff;
 	text-align: center;
 	white-space: nowrap;
-	animation: popup 0.5s ease-in-out both 0.7s
+	-webkit-animation: popup 0.5s ease-in-out both 0.7s;
+	        animation: popup 0.5s ease-in-out both 0.7s
 }
 
 .template-gift-card .tooltip-triangle {
@@ -7056,7 +7133,8 @@ table.mobile-layout tr:nth-child(even) td {
 .template-gift-card footer[role='contentinfo'] {
 	padding-bottom: 3em;
 	text-align: center;
-	animation: fadein 0.5s ease-in-out both 0.4s
+	-webkit-animation: fadein 0.5s ease-in-out both 0.4s;
+	        animation: fadein 0.5s ease-in-out both 0.4s
 }
 
 .template-gift-card .gift-card-apple-wallet-badge {
@@ -7369,7 +7447,8 @@ table.mobile-layout tr:nth-child(even) td {
 		.template-index .slideshow--desktop-height-natural .image-wrap img {
 			width: auto;
 			height: auto;
-			object-fit: fill
+			-o-object-fit: fill;
+			   object-fit: fill
 		}
 	}
 }
@@ -7403,7 +7482,8 @@ table.mobile-layout tr:nth-child(even) td {
 		.template-index .slideshow--mobile-height-natural .image-wrap img {
 			width: auto;
 			height: auto;
-			object-fit: fill
+			-o-object-fit: fill;
+			   object-fit: fill
 		}
 	}
 	.template-index .slideshow--mobile-height-small .image-wrap {
@@ -7436,7 +7516,8 @@ table.mobile-layout tr:nth-child(even) td {
 	.template-index .slide img {
 		width: 100%;
 		height: 100%;
-		object-fit: cover
+		-o-object-fit: cover;
+		   object-fit: cover
 	}
 }
 
@@ -8185,8 +8266,6 @@ html:not(.header-layout-minimal) .shopify-section:first-of-type .home-section.sl
 }
 
 .visible .instagram-photo {
-	-webkit-transition: opacity 0.5s ease-out;
-	-moz-transition: opacity 0.5s ease-out;
 	transition: opacity 0.5s ease-out;
 	opacity: 1;
 	visibility: visible
@@ -8366,7 +8445,8 @@ html:not(.header-layout-minimal) .shopify-section:first-of-type .home-section.sl
 	width: 100%;
 	height: 100%;
 	opacity: 1;
-	object-fit: cover
+	-o-object-fit: cover;
+	   object-fit: cover
 }
 
 .pxs-map-overlay {
@@ -8712,7 +8792,8 @@ html:not(.header-layout-minimal) .shopify-section:first-of-type .home-section.sl
 	width: 100%;
 	height: auto;
 	opacity: 1;
-	object-fit: cover
+	-o-object-fit: cover;
+	   object-fit: cover
 }
 
 .menu-list-container .collection-wrap li:not(:first-of-type) {
@@ -9653,8 +9734,6 @@ html:not(.header-layout-minimal) .shopify-section:first-of-type .home-section.sl
 
 .product-area .showcase .wrap .overlay,
 .product-area .pager .wrap .overlay {
-	-webkit-transition: box-shadow 200ms;
-	-moz-transition: box-shadow 200ms;
 	transition: box-shadow 200ms;
 	position: absolute;
 	top: 0;
@@ -9739,15 +9818,11 @@ html:not(.header-layout-minimal) .shopify-section:first-of-type .home-section.sl
 }
 
 .product-area .product-main-image {
-	-webkit-transition: height 0.2s ease-in;
-	-moz-transition: height 0.2s ease-in;
 	transition: height 0.2s ease-in;
 	position: relative
 }
 
 .product-area .product-main-image img {
-	-webkit-transition: opacity 0.2s ease-in;
-	-moz-transition: opacity 0.2s ease-in;
 	transition: opacity 0.2s ease-in;
 	z-index: 100;
 	display: block;
@@ -10968,15 +11043,11 @@ html:not(.header-layout-minimal) .shopify-section:first-of-type .home-section.sl
 	font-size: 14px
 }
 
-.rs-form-input::-webkit-input-placeholder {
-	color: #636363
-}
-
 .rs-form-input:-ms-input-placeholder {
 	color: #636363
 }
 
-.rs-form-input::-ms-input-placeholder {
+.rs-form-input::-moz-placeholder {
 	color: #636363
 }
 
@@ -11123,7 +11194,8 @@ html:not(.header-layout-minimal) .shopify-section:first-of-type .home-section.sl
 	left: 0;
 	width: 100%;
 	height: 100%;
-	object-fit: cover
+	-o-object-fit: cover;
+	   object-fit: cover
 }
 
 .subcollection-content {
@@ -11673,8 +11745,10 @@ html:not(.header-layout-minimal) .shopify-section:first-of-type .home-section.sl
 .collection-image {
 	width: 100%;
 	min-height: 200px;
-	object-fit: cover;
-	object-position: center
+	-o-object-fit: cover;
+	   object-fit: cover;
+	-o-object-position: center;
+	   object-position: center
 }
 
 .collection-title-header {
@@ -11744,7 +11818,8 @@ html:not(.header-layout-minimal) .shopify-section:first-of-type .home-section.sl
 		.picture-block.picture-block--desktop-height-natural .picture-block-image img {
 			width: auto;
 			height: auto;
-			object-fit: fill
+			-o-object-fit: fill;
+			   object-fit: fill
 		}
 	}
 }
@@ -11773,7 +11848,8 @@ html:not(.header-layout-minimal) .shopify-section:first-of-type .home-section.sl
 		.picture-block.picture-block--mobile-height-natural .picture-block-image img {
 			width: auto;
 			height: auto;
-			object-fit: fill
+			-o-object-fit: fill;
+			   object-fit: fill
 		}
 	}
 }
@@ -11814,7 +11890,8 @@ html:not(.header-layout-minimal) .shopify-section:first-of-type .home-section.sl
 	.picture-block-image img {
 		width: 100%;
 		height: 100%;
-		object-fit: cover
+		-o-object-fit: cover;
+		   object-fit: cover
 	}
 }
 
@@ -12225,15 +12302,11 @@ html:not(.header-layout-minimal) .shopify-section:first-of-type .home-section.sl
 	}
 }
 
-.ls-input::-webkit-input-placeholder {
-	color: #636363
-}
-
 .ls-input:-ms-input-placeholder {
 	color: #636363
 }
 
-.ls-input::-ms-input-placeholder {
+.ls-input::-moz-placeholder {
 	color: #636363
 }
 
@@ -13209,7 +13282,8 @@ html:not(.header-layout-minimal) .shopify-section:first-of-type .home-section.sl
 	width: 18px;
 	height: 18px;
 	margin: 0 auto;
-	animation: spinner 700ms infinite cubic-bezier(0.69, 0.31, 0.56, 0.83);
+	-webkit-animation: spinner 700ms infinite cubic-bezier(0.69, 0.31, 0.56, 0.83);
+	        animation: spinner 700ms infinite cubic-bezier(0.69, 0.31, 0.56, 0.83);
 	transform-origin: center center
 }
 
@@ -13287,9 +13361,10 @@ html:not(.header-layout-minimal) .shopify-section:first-of-type .home-section.sl
 	opacity: 0
 }
 
-@supports (object-fit: cover) {
+@supports ((-o-object-fit: cover) or (object-fit: cover)) {
 	.product-card-figure img {
-		object-fit: cover
+		-o-object-fit: cover;
+		   object-fit: cover
 	}
 	.product-card-figure img:last-of-type {
 		order: 1;
@@ -13324,7 +13399,7 @@ html:not(.header-layout-minimal) .shopify-section:first-of-type .home-section.sl
 	opacity: 1
 }
 
-@supports (object-fit: cover) {
+@supports ((-o-object-fit: cover) or (object-fit: cover)) {
 	.product-card-figure:hover img:first-of-type {
 		order: 0;
 		opacity: 1
@@ -13362,7 +13437,7 @@ html:not(.header-layout-minimal) .shopify-section:first-of-type .home-section.sl
 	background-size: cover
 }
 
-@supports (object-fit: cover) {
+@supports ((-o-object-fit: cover) or (object-fit: cover)) {
 	.product-card-figure-ie {
 		display: none
 	}
@@ -13376,7 +13451,7 @@ html:not(.header-layout-minimal) .shopify-section:first-of-type .home-section.sl
 	display: block
 }
 
-@supports (object-fit: cover) {
+@supports ((-o-object-fit: cover) or (object-fit: cover)) {
 	.product-card-figure-ie:first-of-type {
 		display: none
 	}
@@ -13390,7 +13465,7 @@ html:not(.header-layout-minimal) .shopify-section:first-of-type .home-section.sl
 	display: block
 }
 
-@supports (object-fit: cover) {
+@supports ((-o-object-fit: cover) or (object-fit: cover)) {
 	.product-card-figure:hover .product-card-figure-ie:last-of-type {
 		display: none
 	}
@@ -13765,7 +13840,8 @@ img[data-rimg="loaded"] {
 	width: 100%;
 	height: 100%;
 	opacity: 1;
-	object-fit: fill
+	-o-object-fit: fill;
+	   object-fit: fill
 }
 
 .sharethis {
@@ -14052,7 +14128,8 @@ img[data-rimg="loaded"] {
 }
 
 .fit-image{
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 
 .carousel img {
@@ -14106,6 +14183,7 @@ img[data-rimg="loaded"] {
 }
 
 .button-jumbotron {
+    cursor: -webkit-grab;
     cursor: grab;
 }
 .text-on-jumbotron {

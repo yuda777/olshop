@@ -104,9 +104,7 @@ if($('.carousel-priviewitem').length){
 
 window.onload = function() {
     const list = document.querySelectorAll('.text-on-jumbotron');
-    for (var i = 0; i < list.length; ++i) {
-        list[i].classList.add('animate');
-     }
+    list[0].classList.add('animate');
 };
 
 

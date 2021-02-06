@@ -6447,7 +6447,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/hooper/dist/hooper.css":
 /*!*****************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./node_modules/hooper/dist/hooper.css ***!
+  !*** ./node_modules/css-loader??ref--7-1!./node_modules/postcss-loader/src??ref--7-2!./node_modules/hooper/dist/hooper.css ***!
   \*****************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -9810,7 +9810,7 @@ return getSize;
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(/*! !../../css-loader??ref--6-1!../../postcss-loader/src??ref--6-2!./hooper.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/hooper/dist/hooper.css");
+var content = __webpack_require__(/*! !../../css-loader??ref--7-1!../../postcss-loader/src??ref--7-2!./hooper.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/hooper/dist/hooper.css");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -55560,6 +55560,17 @@ module.exports = function(module) {
 
 /***/ }),
 
+/***/ "./resources/css/styles.css":
+/*!**********************************!*\
+  !*** ./resources/css/styles.css ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ "./resources/js/app.js":
 /*!*****************************!*\
   !*** ./resources/js/app.js ***!
@@ -55665,10 +55676,7 @@ if ($('.carousel-priviewitem').length) {
 
 window.onload = function () {
   var list = document.querySelectorAll('.text-on-jumbotron');
-
-  for (var i = 0; i < list.length; ++i) {
-    list[i].classList.add('animate');
-  }
+  list[0].classList.add('animate');
 };
 
 /***/ }),
@@ -55974,14 +55982,15 @@ __webpack_require__.r(__webpack_exports__);
 /***/ }),
 
 /***/ 0:
-/*!*************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/app.scss ***!
-  \*************************************************************/
+/*!****************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/css/styles.css ***!
+  \****************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! I:\pro\lar\olshop\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! I:\pro\lar\olshop\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! I:\pro\lar\olshop\resources\sass\app.scss */"./resources/sass/app.scss");
+module.exports = __webpack_require__(/*! I:\pro\lar\olshop\resources\css\styles.css */"./resources/css/styles.css");
 
 
 /***/ })
