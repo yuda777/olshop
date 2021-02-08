@@ -13,7 +13,6 @@
         </div>
         <div class="content content-area">
             <section class=" product-area clearfix">
-                <script type="application/json" data-images=""></script>
                 <div class=" showcase product-images left-main-image">
                     <div class="container">
                         <div class="product-main-image wrap ">
@@ -59,7 +58,6 @@
                             </p>
                         </div>
                         <div class="options  ">
-                            <form method="post" action="/cart/add" id="6223008432303" accept-charset="UTF-8" class=" product-form product-form-has-spb " enctype="multipart/form-data" data-product-form="">
                                 <input type="hidden" name="form_type" value="product"><input type="hidden" name="utf8" value="✓">
                                 <div class="product-form-grid product-form-grid-radio">
                                     <div class=" option-header js-required ">
@@ -94,35 +92,16 @@
                                     </label>
                                     <input type="text" class=" product-quantity-input " name="quantity" value="1">
                                 </div>
-                                <a href="https://api.whatsapp.com/send?phone=+6287883114043&text=Beli {{ $item->item_name }}">Click WhatsApp</a>
-                                <button class="product-submit action-button submit desaturated addtocart-button-active" data-product-submit="" data-product-variant-id="" value="Add to cart">
-                                    <span class="product-card-interaction-addtocart-available">
-                                    Add to cart
+                                <a href="https://api.whatsapp.com/send?phone=+6287883114043&text=Beli {{ $item->item_name }}" class="whatsapp-button product-submit action-button submit desaturated addtocart-button-active" >
+                                    <span href="https://api.whatsapp.com/send?phone=+6287883114043&text=Beli {{ $item->item_name }}" class="product-card-interaction-addtocart-available">
+                                        Buy Via WhatsApp
                                     </span>
-                                    <span class="product-card-interaction-addtocart-error">
-                                    Unavailable
+                                </a>
+                                <a href="https://shopee.co.id" class="shopee-button product-submit action-button submit desaturated addtocart-button-active" style="margin-top:5px;">
+                                    <span href="https://api.whatsapp.com/send?phone=+6287883114043&text=Beli {{ $item->item_name }}" class="product-card-interaction-addtocart-available">
+                                        Buy Via Shopee
                                     </span>
-                                    <div class="product-card-interaction-addtocart-spinner">
-                                        <svg class="svg-icon icon-spinner " xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" style="--darkreader-inline-fill:none;" data-darkreader-inline-fill="">
-                                            <path fill="currentColor" fill-rule="evenodd" d="M1.0436 10.9683C1.47582 10.9683 1.8262 11.3255 1.8262 11.7661C1.8262 17.4946 6.38122 22.1385 12.0001 22.1385C17.619 22.1385 22.174 17.4946 22.174 11.7661C22.174 11.3255 22.5244 10.9683 22.9566 10.9683C23.3889 10.9683 23.7392 11.3255 23.7392 11.7661C23.7392 18.3759 18.4835 23.7342 12.0001 23.7342C5.51677 23.7342 0.260986 18.3759 0.260986 11.7661C0.260986 11.3255 0.611372 10.9683 1.0436 10.9683Z" style="--darkreader-inline-fill:currentColor;" data-darkreader-inline-fill=""></path>
-                                        </svg>
-                                    </div>
-                                </button>
-                                <div data-shopify="payment-button" class="shopify-payment-button">
-                                    <div>
-                                        <div>
-                                            <div>
-                                                <div class="shopify-cleanslate">
-                                                    <div id="shopify-svg-symbols" class="VoW3UuJKYxZJHMpUkDNUv" aria-hidden="true">
-                                                    </div>
-                                                </div>
-                                                <button style="width: 100%;" type="button" class="shopify-payment-button__button shopify-payment-button__button--unbranded _2ogcW-Q9I-rgsSkNbRiJzA _2EiMjnumZ6FVtlC7RViKtj _2-dUletcCZ2ZL1aaH0GXxT" data-testid="Checkout-button">Buy it now</button>
-                                                {{-- <button aria-disabled="true" aria-hidden="true" class="shopify-payment-button__more-options _2ogcW-Q9I-rgsSkNbRiJzA shopify-payment-button__button--hidden" type="button" data-testid="sheet-open-button">More payment options</button> --}}
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
+                                </a>
                         </div>
                         <div class="product-interactions product-interactions-2">
                             <a class="product-interaction email-us" href="mailto:zerone@gmai.com?Subject=CORWIN GREEN TEE">

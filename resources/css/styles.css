@@ -2147,15 +2147,13 @@ textarea {
 	background-color: #fbfbfb
 }
 
-body,
-html {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: auto;
-	min-height: 100%;
-	-webkit-font-smoothing: antialiased
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
 }
 
 html::after {
@@ -14025,8 +14023,12 @@ img[data-rimg="loaded"] {
 	margin-bottom: 0
 }
 
+.carousel-priviewitem {
+    height: 450px;
+}
+
 .carousel-main {
-    border: 1px solid gray;
+    /* border: 1px solid gray; */
     width: 250px;
     margin-left: 40px;
     height: 350px;
@@ -14060,14 +14062,14 @@ img[data-rimg="loaded"] {
     height: 100%;
     width: 100%;
 }
-.carousel {
+.carousel-jumbotron {
     height: 700px;
 }
 
 
 /* carousel height */
 @media screen and ( max-width: 768px ) {
-    .carousel {
+    .carousel-jumbotron {
         height: 215px;
     }
 }
@@ -14169,6 +14171,7 @@ img[data-rimg="loaded"] {
         display: block;
         margin: 0px 45px;
         position: relative;
+        left: 10%
     }
 
     .store-logo-mobile img{
@@ -14206,7 +14209,8 @@ img[data-rimg="loaded"] {
 }
 
 .jumbotron {
-    padding-top: 0;
+    padding: 0;
+    margin: 0;
 }
 
 @media (max-width: 719px) {
@@ -14250,3 +14254,76 @@ img[data-rimg="loaded"] {
 	}
 }
 
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+
+.kolom-produk{
+    width: 100%;
+    height: auto;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 10px;
+    padding: 10px;
+}
+
+@media (max-width: 790px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+}
+
+@media (max-width: 720px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-gap: 10px;
+        padding: 10px;
+    }
+}
+
+@media (min-width: 720px) {
+    .kolom-produk{
+        /* width: 260px; */
+        width: 180px;
+        margin: 10px 35px;
+    }
+}
+
+.card-img-top{
+    height: 225px;
+}
+
+.link-produk{
+    height: 250px;
+}
+
+.whatsapp-button{
+    color: white !important;
+    background-color: #48B754 !important;
+    background-image: url('/storage/whatsapp.webp');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.shopee-button{
+    color: white !important;
+    background-color: #FE5721 !important;
+    background-image: url('/storage/shopee.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.grid-div {
+    text-align: center;
+    padding: 20px 0;
+}

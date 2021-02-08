@@ -28,36 +28,29 @@
                     shop now
                 </span>
             </div>
-            <img class="" src="{{ asset('storage/c3.webp') }}">
+            <img class="" src="{{ asset('storage/distro_cover.jpg') }}">
         </div>
     </div>
 </div>
-<div class="container">
-    <div class="row">
-        <div class="row">
-            @foreach ($items as $item)
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card h-100">
-                        <a href="{{ route('items.show',$item->id) }}"><img class="card-img-top" src="{{ asset('storage/'.$item->photo_1) }}" alt=""></a>
-                        <div class="card-body">
-                            <h4 class="card-title">
-                                <a href="{{ route('items.show',$item->id) }}">{{ $item->item_name }}</a>
-                            </h4>
-                            <h5>{{ $item->new_price }}</h5>
-                            <p class="card-text"></p>
-                        </div>
-                        <div class="card-footer">
-                            <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-                        </div>
-                    </div>
-                </div>
-            @endforeach
+<div class="flex-container grid-container">
+    @foreach ($items as $item)
+        <div class="kolom-produk grid-div">
+            <a class="link-produk" href="{{ route('items.show',$item->id) }}">
+                <img class="card-img-top" src="{{ asset('storage/'.$item->photo_1) }}" alt="">
+            </a>
+            <div class="card-body">
+                <h4 class="card-title">
+                    <a href="{{ route('items.show',$item->id) }}">{{ $item->item_name }}</a>
+                </h4>
+                <h5>{{ $item->new_price }}</h5>
+                <p class="card-text"></p>
+            </div>
         </div>
-    </div>
+    @endforeach
 </div>
 <footer class="py-5 bg-dark">
     <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2020</p>
+        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2021</p>
     </div>
 </footer>
 @endsection

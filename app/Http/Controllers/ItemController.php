@@ -14,8 +14,8 @@ class ItemController extends Controller
      */
     public function index()
     {
-        $items = Item::latest()->paginate(5);
-        return view('item',compact('items'))->with('i',(request()->input('page',1)-1)*5);
+        $items = Item::latest()->paginate(20);
+        return view('item',compact('items'))->with('i',(request()->input('page',1)-1)*20);
 
     }
 
