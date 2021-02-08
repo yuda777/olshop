@@ -11,6 +11,9 @@
     <title>olshop</title>
 </head>
 <body>
+    <div id="loading">
+        <span id="loading-image">Loading...</span>
+    </div>
     <section class="main-header">
         <div class="header-minimal">
            <h1 class="store-title store-logo">

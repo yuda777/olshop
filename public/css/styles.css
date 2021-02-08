@@ -14351,11 +14351,13 @@ img[data-rimg="loaded"] {
     grid-template-columns: auto auto auto auto;
     grid-gap: 10px;
     padding: 10px;
+    justify-content: center;
 }
 
 @media (max-width: 790px) {
     .grid-container {
         display: grid;
+        justify-content: center;
         grid-template-columns: auto auto auto;
     }
 }
@@ -14363,6 +14365,7 @@ img[data-rimg="loaded"] {
 @media (max-width: 720px) {
     .grid-container {
         display: grid;
+        justify-content: center;
         grid-template-columns: auto auto;
         grid-gap: 10px;
         padding: 10px;
@@ -14404,4 +14407,29 @@ img[data-rimg="loaded"] {
 .grid-div {
     text-align: center;
     padding: 20px 0;
+}
+
+#loading {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    display: block;
+    opacity: 0.8;
+    background-color: #fff;
+    z-index: 999999999;
+    text-align: center;
+}
+
+#loading-image {
+    /* position: absolute;
+    top: 100px;
+    left: 240px;
+    z-index: 100;*/
+    font-size: 50px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }

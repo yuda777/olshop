@@ -55676,7 +55676,12 @@ if ($('.carousel-priviewitem').length) {
 
 window.onload = function () {
   var list = document.querySelectorAll('.text-on-jumbotron');
-  list[0].classList.add('animate');
+
+  if (list[0]) {
+    list[0].classList.add('animate');
+  }
+
+  $('#loading').hide();
 };
 
 /***/ }),

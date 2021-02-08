@@ -32,22 +32,24 @@
         </div>
     </div>
 </div>
-<div class="flex-container grid-container">
-    @foreach ($items as $item)
-        <div class="kolom-produk grid-div">
-            <a class="link-produk" href="{{ route('items.show',$item->id) }}">
-                <img class="card-img-top" src="{{ asset('storage/'.$item->photo_1) }}" alt="">
-            </a>
-            <div class="card-body">
-                <h4 class="card-title">
-                    <a href="{{ route('items.show',$item->id) }}">{{ $item->item_name }}</a>
-                </h4>
-                <h5>{{ $item->new_price }}</h5>
-                <p class="card-text"></p>
+<section>
+    <div class="flex-container grid-container">
+        @foreach ($items as $item)
+            <div class="kolom-produk grid-div">
+                <a class="link-produk" href="{{ route('items.show',$item->id) }}">
+                    <img class="card-img-top" src="{{ asset('storage/'.$item->photo_1) }}" alt="">
+                </a>
+                <div class="card-body">
+                    <h4 class="card-title">
+                        <a href="{{ route('items.show',$item->id) }}">{{ $item->item_name }}</a>
+                    </h4>
+                    <h5>{{ $item->new_price }}</h5>
+                    <p class="card-text"></p>
+                </div>
             </div>
-        </div>
-    @endforeach
-</div>
+        @endforeach
+    </div>
+</section>
 <footer class="py-5 bg-dark">
     <div class="container">
         <p class="m-0 text-center text-white">Copyright &copy; Your Website 2021</p>
